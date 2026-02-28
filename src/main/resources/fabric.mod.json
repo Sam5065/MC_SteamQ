@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "mc_steamq",
+	"version": "${version}",
+	"name": "MC_SteamQ",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mc_steamq/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.MC_SteamQ"
+		],
+		"client": [
+			"com.example.MC_SteamQClient"
+		]
+	},
+	"mixins": [
+		"mc_steamq.mixins.json",
+		{
+			"config": "mc_steamq.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
